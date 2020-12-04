@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-1.11.0.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <title>Phonemaster - O nama</title>
+</head>
+<body>
+    <header class="container-fluid">
+        <a href="index.html"><img src="logo.png" alt="Logo" id="logo" /></a>
+        <h1>Phonemaster</h1>
+    </header>
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+        <ul class = "nav navbar-nav navbar-center">
+            <li><a href="index.html">Pocetna</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="index.html#telefoni">Telefoni
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="samsung.html">Samsung Galaxy A70</a></li>
+                    <li><a href="huawei.html">Huawei P40 lite 5G</a></li>
+                    <li><a href="apple.html">iPhone 8 64GB</a></li> 
+                </ul>
+            </li>
+            <li class="active"><a href="onama.html" class="padd">O nama</a></li>
+        </ul>
+    </nav>
+    <article class="container-fluid">
+        Osnovani smo <i>2015. godine</i>!
+        <br />
+        Mi smo vas <strong>najpouzdaniji i najpovoljniji</strong> izvor telefona!
+        <br />
+        <b>Uvek tu</b>, na vec poznatim adresama u najvecim srpskim gradovima!
+        <br />
+        <span class="bg-info text-danger">Radimo 24/7</span>
+        <br />
+        <!--Pomocu gugl mapa ucitana adresa najvece prodavnice u NS(moja zgrada)-->
+        Najveca prodavnica u NS:
+        <div id="map" class="container-fluid" style="width:400px;height:400px;">My map will go here</div>
+        <script>
+			function myMap() {
+				var mapOptions = {
+					center: new google.maps.LatLng(45.241480, 19.824796),
+					zoom: 20,
+					mapTypeId: google.maps.MapTypeId.HYBRID
+				}
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    </article>
+    <hr />
+    <footer class="container-fluid">
+        Uvek tu za vas! Kontakt telefon: <span style="color: red;">065 57 30 724</span>
+    </footer>
+</body>
+</html>

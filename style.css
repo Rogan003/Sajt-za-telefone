@@ -1,0 +1,119 @@
+body{
+    background-color: #333;
+    color: #EEE;
+}
+header{
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: underline;
+}
+table{
+    text-align: center;
+    margin: 0 auto;
+}
+footer{
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 1%;
+    font-variant: small-caps;
+}
+h2{
+    text-align: center;
+    margin: 0 auto;
+}
+div{
+    text-align: center;
+    margin: 0 auto;
+}
+article{
+    text-align: center;
+    margin: 0 auto;
+}
+th{
+    text-align: center;
+}
+.navbar-center{
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+@media (max-width: 767px){
+    .navbar-center{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+    }
+}
+article section div{
+    color:white;
+    background-color: #222;
+}
+.comments{
+    background-color:#AAA;
+}
+td img{
+    margin: 0 auto;
+}
+#specifikacije{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+article section div{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#logo{
+    width: 8%;
+    height: 8%;
+}
+@media (max-width: 900px){
+    #logo{
+        width:15%;
+        height: 15%;
+    }
+}
+figure img{
+    width: 25%; 
+    height: 25%;
+}
+article section form div{
+    background-color: #333;
+    color: #EEE;
+}
+#ime{
+    width :20%;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+textarea{
+    color: black;
+}
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.male-slike{
+    width: 40%;
+    height: 40%;
+}
+@media (max-width: 767px){
+    .dropdown-menu{
+        background-color: white !important;
+    }
+    .dropdown-toggle{
+        padding-right: 0 !important;
+    }
+    .padd{
+        padding-bottom: 25% !important;
+    }
+    li>ul>li>a{
+        color: black !important;
+    }
+}
+.comments input{
+    width: 1%;
+    height: 1%;
+}
