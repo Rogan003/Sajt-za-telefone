@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phonemaster - O nama</title>
+    <style>
+        header{
+            text-align: center;
+            margin: 0 auto;
+        }
+        nav{
+            text-align: center;
+            margin: 0 auto;
+        }
+        footer{
+            text-align: center;
+            margin: 0 auto;
+        }
+        article{
+            text-align: center;
+            margin: 0 auto;
+        }
+        div{
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logo.png" alt="Logo" style="width: 8%;height: 8%;" /></a>
+        <h1>Phonemaster</h1>
+    </header>
+    <nav>
+        <ul>
+            <a href="index.html"><li>Pocetna</li></a>
+            <a href="index.html#telefoni"><li>Telefoni</li></a>
+            <a href="onama.html"><li>O nama</li></a>
+        </ul>
+    </nav>
+    <article style="background-color: red;">
+        Osnovani smo <i>2015. godine</i>!
+        <br />
+        Mi smo vas <strong>najpouzdaniji i najpovoljniji</strong> izvor telefona!
+        <br />
+        <b>Uvek tu</b>, na vec poznatim adresama u najvecim srpskim gradovima!
+        <br />
+        <span style="color: red;background-color: black;">Radimo 24/7</span>
+        <br />
+        <!--Pomocu gugl mapa ucitana adresa najvece prodavnice u NS(moja zgrada)-->
+        Najveca prodavnica u NS:
+        <div id="map" style="width:400px;height:400px;">My map will go here</div>
+        <script>
+			function myMap() {
+				var mapOptions = {
+					center: new google.maps.LatLng(45.241480, 19.824796),
+					zoom: 20,
+					mapTypeId: google.maps.MapTypeId.HYBRID
+				}
+			var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    </article>
+    <hr />
+    <footer>
+        Uvek tu za vas! Kontakt telefon: <span style="color: red;">065 57 30 724</span>
+    </footer>
+</body>
+</html>
