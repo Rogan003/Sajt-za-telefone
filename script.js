@@ -505,11 +505,16 @@ function loadPage(telefon)
 }
 $(document).ready(function()
 {
-    if(location.href.indexOf("index") > -1){
-        pocetna();
+    if(location.href.indexOf("onama") > -1){
+        navigacija();
     }
     else{
-        var telefon = new URLSearchParams(location.search);
-        loadPage(telefoni.find(trenutni => trenutni.id == telefon.get("telefon")));
+        if(location.href.indexOf("index") > -1){
+            pocetna();
+        }
+        else{
+            var telefon = new URLSearchParams(location.search);
+            loadPage(telefoni.find(trenutni => trenutni.id == telefon.get("telefon")));
+        }
     }
 });
