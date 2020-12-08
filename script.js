@@ -426,10 +426,14 @@ function reviews(telefon){
             $(".review:last").append(`<div id="review${i+1}" class="collapse in"></div>`);
             $.each(review.reviewtext, function(j,text){
                 if(j % 2 == 0){
-                    //kolone jedna u drugoj
                     $(`#review${i+1}`).append(`<div class="row"></div>`);
                 }
-                $(".row:last").append(`<div class="col-sm-6 col-md-6 col-lg-6"></div>`);
+                if((j + 1) % 2 == 1 && (j + 1) == review.reviewtext.length){
+                    $(".row:last").append(`<div class="col-sm-12 col-md-12 col-lg-12"></div>`);
+                }
+                else{
+                    $(".row:last").append(`<div class="col-sm-6 col-md-6 col-lg-6"></div>`);
+                }
                 $("div div div:last").append(`<h4>${text.heading}</h4>`);
                 $.each(text.text, function(k,textic){
                     $("div div div *:last").after(`<p>${textic}</p>`);
@@ -448,39 +452,42 @@ function reviews(telefon){
         } 
     });
 }
+function komentari(telefon){
+    var prosecna = 0;
+    $.each(telefon.experiences,function(i,x){
+        $(".comments").append("Autor: " + x.authorname + "<br />");
+        $(".comments").append("Ocena: " + x.rating + "<br />" + "<span>" + "Komentar: " +  x.text  + "</span>" + "<br />");
+        prosecna += x.rating;
+        if(x.likes > x.dislikes){
+            $(".comments span:last").css("color", "blue");
+        }
+        else if(x.likes < x.dislikes){
+            $(".comments span:last").css("color", "red");
+        }
+        else{
+            $(".comments span:last").css("color", "whit");
+        }
+        $(".comments").append(x.likes
+        + "<input type='image' src = 'like.png' />"
+        + x.dislikes
+        + "<input type='image' src = 'dislike.png' />"
+        + "<br />"
+        + "<button class='btn btn-primary'>Odgovorite</button>" + "<br />");
+        $.each(x.comments,function(j,y){
+            if(j == 0){
+                $(".comments").append("<section class='odgovori'>" + "<span style='font-size: 130%;color: green;'>ODGOVORI:</span>" + "<br />" + "</section>");
+            }
+            $(".odgovori").append("Autor: " + y.authorname + "<br />");
+            $(".odgovori").append("Komentar: " +  y.text + "<br />");
+        });
+    })
+    $("article section form").after("Prosecna ocena: " + prosecna / telefon.experiences.length);
+}
 function loadPage(telefon)
 {
     vrh(telefon);
     reviews(telefon);
-        var prosecna = 0;
-        for(x in telefon.experiences){
-            $(".comments *").after("Autor: " + x.authorname + "<br />");
-            $(".comments *").after("<span>" + "Ocena: " + x.rating + "<br />Komentar: " +  x.text  + "</span>" + "<br />");
-            prosecna += x.rating;
-            if(x.likes > x.dislikes){
-                $(".comments span:last").css("color", "blue");
-            }
-            else if(x.likes < x.dislikes){
-                $(".comments span:last").css("color", "red");
-            }
-            else{
-                $(".comments span:last").css("color", "whit");
-            }
-            $(".comments *").after(x.likes
-            + "<input type='image' src = 'like.png' />"
-            + x.dislikes
-            + "<input type='image' src = 'dislike.png' />"
-            + "<br />"
-            + "<button class='btn btn-primary'>Odgovorite</button>" + "<br />");
-            for(y in telefon.experiences[x].comments){
-                if(y == 0){
-                    $(".comments *").after("<section class='odgovori'>" + "</section>");
-                }
-                $(".odgovori:last").append("Autor: " + y.authorname + "<br />");
-                $(".odgovori *").after("Komentar: " +  y.text + "<br />");
-            }
-        }
-        $("article section form").after("Prosecna ocena: " + prosecna / telefon.experiences.length);
+    komentari(telefon);
 }
 $(document).ready(function()
 {

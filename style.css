@@ -124,5 +124,6 @@ textarea{
     }
 }
 .odgovori{
-    padding-left: 10%;
+    font-variant: small-caps;
+    color: yellow;
 }
