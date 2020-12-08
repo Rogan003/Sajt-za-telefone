@@ -75,8 +75,8 @@ article section div{
     }
 }
 figure img{
-    width: 25%; 
-    height: 25%;
+    width: 30%; 
+    height: 30%;
 }
 article section form div{
     background-color: #333;
@@ -122,4 +122,7 @@ textarea{
         width: 3%;
         height: 3%;
     }
+}
+.odgovori{
+    padding-left: 10%;
 }
