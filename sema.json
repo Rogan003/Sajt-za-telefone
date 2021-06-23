@@ -1,0 +1,184 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "name" : "telefoni",
+    "bsonType": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                                "id": {
+                                    "bsonType": "int"
+                                },
+                                "basicData": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "link": {
+                                            "type": "string"
+                                        },
+                                        "model": {
+                                            "type": "string"
+                                        },
+                                        "brand": {
+                                            "type": "string"
+                                        },
+                                        "phoneImage": {
+                                            "type": "string"
+                                        },
+                                        "price": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "brand",
+                                        "link",
+                                        "model",
+                                        "phoneImage",
+                                        "price"
+                                    ]
+                                },
+                                "specs": {
+                                    "type": "object",
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "memory": {
+                                            "type": "string"
+                                        },
+                                        "battery": {
+                                            "type": "string"
+                                        },
+                                        "camera": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "battery",
+                                        "camera",
+                                        "memory"
+                                    ]
+                                },
+                                "review": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "reviewtext": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "heading": {
+                                                            "type": "string"
+                                                        },
+                                                        "text": {
+                                                            "type": "array",
+                                                            "items": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "picture": {
+                                                            "type": "string"
+                                                        },
+                                                        "alt": {
+                                                            "type": "string"
+                                                        },
+                                                        "caption": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "alt",
+                                                        "caption",
+                                                        "heading",
+                                                        "picture",
+                                                        "text"
+                                                    ]
+                                                }
+                                            },
+                                            "reviewauthor": {
+                                                "type": "string"
+                                            },
+                                            "dugme": {
+                                                "type": "string"
+                                            },
+                                            "naziv": {
+                                                "type": "string"
+                                            },
+                                            "reviewurl": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "naziv",
+                                            "reviewauthor"
+                                        ]
+                                    }
+                                },
+                                "experiences": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "id": {
+                                                "bsonType": "int"
+                                            },
+                                            "authorname": {
+                                                "type": "string"
+                                            },
+                                            "rating": {
+                                                "bsonType": "int"
+                                            },
+                                            "text": {
+                                                "type": "string"
+                                            },
+                                            "likes": {
+                                                "bsonType": "int"
+                                            },
+                                            "dislikes": {
+                                                "bsonType": "int"
+                                            },
+                                            "comments": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "additionalProperties": false,
+                                                    "properties": {
+                                                        "id": {
+                                                            "bsonType": "int"
+                                                        },
+                                                        "authorname": {
+                                                            "type": "string"
+                                                        },
+                                                        "text": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "authorname",
+                                                        "id",
+                                                        "text"
+                                                    ]
+                                                }
+                                            }
+                                        },
+                                        "required": [
+                                            "authorname",
+                                            "comments",
+                                            "dislikes",
+                                            "id",
+                                            "likes",
+                                            "rating",
+                                            "text"
+                                        ]
+                                    }
+                                }
+                            },
+                            "required": [
+                                "basicData",
+                                "experiences",
+                                "id",
+                                "review",
+                                "specs"
+                            ]
+                }

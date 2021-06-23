@@ -48,7 +48,7 @@
     <article>
         <h3>Komentari</h3>
         <section>
-            <form class="form">
+            <form class="form" method="post" id="forma1">
                 <div class="form-group">
                     <label>Unesite komentar:</label>
                     <input type="text" placeholder="Ime" class="form-control" id="ime" />
@@ -58,7 +58,7 @@
                 </div>
                 <div class="form-group">
                     <label>Ocenite telefon:</label>
-                    <input type="radio" id="1" name="ocena" value="1" />
+                    <input type="radio" id="1" name="ocena" value="1"/>
                     <label for="1">1</label>
                     <input type="radio" id="2" name="ocena" value="2" />
                     <label for="2">2</label>
@@ -68,20 +68,12 @@
                     <label for="4">4</label>
                     <input type="radio" id="5" name="ocena" value="5" />
                     <label for="5">5</label>
-                    <input type="submit" value="Posalji" class="btn btn-default" />
+                    <input type="submit" value="submit" class="btn btn-default" id="submit" />
                 </div>               
             </form>
         </section>
         <br />
-        <section class = "comments">
-            <!--<form>
-                <input type="text" placeholder="Ime" />
-                <br />
-                <textarea name="odgovor" id="odg" cols="30" rows="2" placeholder="Odgovorite"></textarea>
-                <br />
-                <input type="submit" value="Posalji" />
-            </form>-->
-        </section>
+        <section class = "comments"></section>
     </article>
     <hr />
     <footer>

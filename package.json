@@ -1,0 +1,18 @@
+{
+    "name": "telefoni",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "dependencies": {
+        "angular": "^1.8.2",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "mongodb": "^3.6.6",
+        "mongoose": "^5.12.7"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    }
+}

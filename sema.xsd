@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="licneKarte">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="licnaKarta" minOccurs="1" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="osoba" minOccurs="1" maxOccurs="1">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="ime" minOccurs="1" maxOccurs="1" type="xsd:string" />
+                                        <xsd:element name="prezime" minOccurs="1" maxOccurs="1" type="xsd:string" />
+                                        <xsd:element name="datumRodjenja" minOccurs="1" maxOccurs="1" type="xsd:date" />
+                                        <xsd:element name="pol" minOccurs="1" maxOccurs="1">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:enumeration value="M"/>
+                                                    <xsd:enumeration value="Z"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element> 
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="dokument" minOccurs="1" maxOccurs="1">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="regBr" minOccurs="1" maxOccurs="1">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="([0-9])+" />
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="datumIzdavanja" minOccurs="1" maxOccurs="1" type="xsd:date" />
+                                        <xsd:element name="vaziDo" minOccurs="1" maxOccurs="1" type="xsd:date" />
+                                        <xsd:element name="dokumentIzdaje" minOccurs="1" maxOccurs="1" type="xsd:string" />
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

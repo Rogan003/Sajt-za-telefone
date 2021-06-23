@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<licneKarte xsi:schemaLocation="sema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <licnaKarta>
+        <osoba>
+            <ime>Esad</ime>
+            <prezime>Dzudzo</prezime>
+            <datumRodjenja>1958-07-05</datumRodjenja>
+            <pol>M</pol>
+        </osoba>
+        <dokument>
+            <regBr>005778960</regBr>
+            <datumIzdavanja>2014-08-26</datumIzdavanja>
+            <vaziDo>2024-08-26</vaziDo>
+            <dokumentIzdaje>PS u Tutinu</dokumentIzdaje>
+        </dokument>
+    </licnaKarta>
+    <licnaKarta>
+        <osoba>
+            <ime>Milica</ime>
+            <prezime>Test</prezime>
+            <datumRodjenja>1968-02-29</datumRodjenja>
+            <pol>Z</pol>
+        </osoba>
+        <dokument>
+            <regBr>955555546</regBr>
+            <datumIzdavanja>2008-07-24</datumIzdavanja>
+            <vaziDo>2013-07-24</vaziDo>
+            <dokumentIzdaje>PU za grad Beograd</dokumentIzdaje>
+        </dokument>
+    </licnaKarta>
+    <licnaKarta>
+        <osoba>
+            <ime>Slavisa</ime>
+            <prezime>Mijatovic</prezime>
+            <datumRodjenja>1975-06-30</datumRodjenja>
+            <pol>M</pol>
+        </osoba>
+        <dokument>
+            <regBr>001102408</regBr>
+            <datumIzdavanja>2009-10-08</datumIzdavanja>
+            <vaziDo>2014-10-08</vaziDo>
+            <dokumentIzdaje>PU za grad Beograd</dokumentIzdaje>
+        </dokument>
+    </licnaKarta>
+</licneKarte>
