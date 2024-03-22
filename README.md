@@ -1,2 +1,2 @@
 # Sajt-za-telefone
-Sajt za telefone, koji je bio moj zadatak za predmet baze podataka.
+This is a website about mobile phones, which was a school project. Knowledge in HTML, CSS, Bootstrap, JavaScript, JQuery, JSON, Node.js, MongoDB, and more is displayed here.
